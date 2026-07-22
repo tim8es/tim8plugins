@@ -1,0 +1,26 @@
+{
+  "id": "tool-checkpoint-guard",
+  "name": "Tool Checkpoint Guard",
+  "description": "Blocks tool calls beyond a per-run budget and requires a checkpoint before finalization.",
+  "activation": {
+    "onStartup": true
+  },
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "maxToolCallsPerRun": {
+        "type": "integer",
+        "minimum": 1,
+        "maximum": 100,
+        "default": 15
+      },
+      "maxAutoContinuations": {
+        "type": "integer",
+        "minimum": 1,
+        "maximum": 20,
+        "default": 8
+      }
+    }
+  }
+}

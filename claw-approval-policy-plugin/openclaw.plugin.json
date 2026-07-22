@@ -1,0 +1,31 @@
+{
+  "id": "approval-policy",
+  "name": "Approval Policy",
+  "description": "Require approval for selected tools and exec outside configured workspace roots.",
+  "version": "0.1.0",
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "workspaceRoots": {
+        "type": "array",
+        "items": { "type": "string", "minLength": 1 },
+        "minItems": 1
+      },
+      "defaultWorkdir": { "type": "string", "minLength": 1 },
+      "approvalTools": {
+        "type": "array",
+        "items": { "type": "string", "minLength": 1 },
+        "uniqueItems": true
+      },
+      "execTools": {
+        "type": "array",
+        "items": { "type": "string", "minLength": 1 },
+        "uniqueItems": true
+      },
+      "failClosed": { "type": "boolean" },
+      "intentParam": { "type": "string", "minLength": 1 }
+    }
+  },
+  "activation": { "onStartup": true }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "openclaw-plugin-approval-policy",
+  "version": "0.1.0",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "test": "node --test policy.test.js"
+  },
+  "files": [
+    "index.js",
+    "policy.js",
+    "openclaw.plugin.json",
+    "README.md"
+  ],
+  "openclaw": {
+    "extensions": ["./index.js"]
+  }
+}

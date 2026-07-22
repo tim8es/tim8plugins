@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "strict": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "outDir": "dist",
+    "rootDir": ".",
+    "declaration": false,
+    "ignoreDeprecations": "6.0",
+    "baseUrl": ".",
+    "paths": {
+      "openclaw/plugin-sdk/plugin-entry": [
+        "C:/Users/itimu/AppData/Local/nvm/v24.18.0/node_modules/openclaw/dist/plugin-sdk/plugin-entry.d.ts"
+      ]
+    }
+  },
+  "include": ["index.ts", "src/**/*.ts", "test/**/*.ts"]
+}
